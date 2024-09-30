@@ -9,7 +9,7 @@ env/
 ENV/
 .venv/
 .env
-pyenv.cfg
+pyvenv.cfg
 
 # Distribution / packaging
 build/

@@ -124,6 +124,7 @@ def generate_response_based_on_course_details(user_message, product_details):
     the customers to make their decision.
     Complete with details such rating, pricing, and skills to be learnt.
     Use Neural Linguistic Programming to construct your response.
+    Do not include any markdown in your response
 
     Use the following format:
     Step 1:{delimiter} <step 1 reasoning>

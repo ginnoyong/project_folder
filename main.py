@@ -4,6 +4,7 @@ import helper_functions.llm # <--- This is the helper function that we have crea
 from logics import customer_query_handler
 import pandas as pd
 import json
+from helper_functions.utility import check_password
 
 # region <--------- Streamlit App Configuration --------->
 st.set_page_config(
@@ -11,6 +12,10 @@ st.set_page_config(
     page_title="My Streamlit App"
 )
 # endregion <--------- Streamlit App Configuration --------->
+
+# Do not continue if check_password is not True.  
+if not check_password():  
+    st.stop()
 
 st.title("Streamlit App")
 
@@ -29,3 +34,5 @@ if form.form_submit_button("Submit"):
     
     #print(f"User Input is {user_prompt}")
 
+st.write(f"""st.session_state.get("password_correct", False):{st.session_state.get("password_correct", False)}""")
+st.write(f""""password_correct" in st.session_state:{"password_correct" in st.session_state}""")

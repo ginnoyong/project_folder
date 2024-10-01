@@ -1,6 +1,11 @@
 import streamlit as st
 import json
 import pandas as pd
+from helper_functions.utility import check_password
+
+# Do not continue if check_password is not True.  
+if not check_password():  
+    st.stop()
 
 filepath = './data/courses-full.json'
 

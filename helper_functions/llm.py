@@ -5,13 +5,13 @@ from openai import OpenAI
 import tiktoken
 
 if load_dotenv('.env'):
-   OPENAI_KEY = os.getenv('OPENAI_API_KEY')
+   AI_API_KEY = os.getenv('OPENAI_API_KEY')
 else:
-   OPENAI_KEY = st.secrets['OPENAPI_API_KEY']
+   AI_API_KEY = st.secrets['OPENAI_API_KEY']
 
 # Pass the API Key to the OpenAI Client
 # client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
-client = OpenAI(api_key=OPENAI_KEY)
+client = OpenAI(api_key=AI_API_KEY)
 
 def get_embedding(input, model='text-embedding-3-small'):
     response = client.embeddings.create(

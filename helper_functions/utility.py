@@ -20,13 +20,11 @@ def check_password():
             st.session_state["password_correct"] = False  
     # Return True if the passward is validated.  
     if st.session_state.get("password_correct", False):  
-        st.write("""inside 1""")
         return True  
     # Show input for password.  
     st.text_input(  
         "Password", type="password", on_change=password_entered, key="password"  
     )  
     if "password_correct" in st.session_state:
-        st.write("""inside 2""")  
         st.error("😕 Password incorrect")  
     return False

@@ -33,6 +33,3 @@ if form.form_submit_button("Submit"):
     st.write(pd.DataFrame.from_dict(dict_details))
     
     #print(f"User Input is {user_prompt}")
-
-st.write(f"""st.session_state.get("password_correct", False):{st.session_state.get("password_correct", False)}""")
-st.write(f""""password_correct" in st.session_state:{"password_correct" in st.session_state}""")
